@@ -1,0 +1,6 @@
+.DS_Store
+.vagrant
+builds
+packer_cache
+*.retry
+**/ansible/roles/**

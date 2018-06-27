@@ -1,0 +1,22 @@
+For DEB package building:
+
+apt-get install 
+  devscripts
+  dpkg-dev
+  build-essential
+  mlocate
+
+
+Rebuild a package from source
+
+mkdir apache2
+cd !$
+apt-get source apache2
+
+Install build dependencies (the -r removes the build-deps deb package after installing, so it does not interfere with the build)
+yes | sudo mk-build-deps -i -r
+
+Build
+dpkg-buildpackage -us -uc
+
+(or `debuild` which also attempts to sign)
