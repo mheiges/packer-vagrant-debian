@@ -5,7 +5,7 @@ apt-get install
   dpkg-dev
   build-essential
   mlocate
-
+  apache2
 
 Rebuild a package from source
 
