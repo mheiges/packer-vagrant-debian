@@ -5,7 +5,7 @@
   remote_user: vagrant
 
   roles:
-    - mheiges.packer-debian
+    - mheiges.packer_debian
 
   tasks:
     - apt: 
