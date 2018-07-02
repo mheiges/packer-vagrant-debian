@@ -1,6 +1,6 @@
 Vagrant.configure("2") do |config|
   config.vm.hostname = "debian9.vm"
-  config.vm.box = "file://builds/virtualbox/vagrant/debian-9-64/debian-9-64.box"
+  config.vm.box = "mheiges/debian-9-64"
 
   config.vm.network :private_network, type: :dhcp
   config.vm.synced_folder '.', '/vagrant', type: 'nfs'
