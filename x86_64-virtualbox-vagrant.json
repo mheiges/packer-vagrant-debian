@@ -1,16 +1,12 @@
 {
-  "variables":
-    {
-      "ssh_username": "vagrant",
-      "ssh_password": "vagrant",
-      "source_path": "builds/virtualbox/debian-9-64-base/debian-9-64-base.ovf"
-    },
+
+  "variables": { "Use Packer -vars-file arg to choose Debian version" : "" },
 
   "builders": [
     {
-      "output_directory": "builds/virtualbox/debian-9-64",
-      "source_path": "{{user `source_path`}}",
-      "vm_name": "debian-9-64-vagrant",
+      "output_directory": "builds/virtualbox/debian-{{user `debian_maj_ver`}}-64",
+      "source_path": "builds/virtualbox/debian-{{user `debian_maj_ver`}}-64-base/debian-{{user `debian_maj_ver`}}-64-base.ovf",
+      "vm_name": "debian-{{user `debian_maj_ver`}}-64-vagrant",
       "type": "virtualbox-ovf",
       "headless": "true",
       "ssh_pty" : "true",
@@ -18,7 +14,7 @@
       "ssh_password": "{{user `ssh_password`}}",
       "ssh_port": 22,
       "ssh_wait_timeout": "60m",
-      "shutdown_command": "echo 'vagrant'|sudo -S shutdown -P now"
+      "shutdown_command": "echo 'vagrant'|sudo -S shutdown -h -P now"
     }
   ],
 
@@ -51,7 +47,7 @@
     [
       {
         "type": "vagrant",
-        "output": "builds/virtualbox/vagrant/debian-9-64/debian-9-64.box",
+        "output": "builds/virtualbox/vagrant/debian-{{user `debian_maj_ver`}}-64/debian-{{user `debian_maj_ver`}}-64.box",
         "keep_input_artifact": false
       }
     ]

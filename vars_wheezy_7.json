@@ -1,0 +1,7 @@
+{
+"debian_maj_ver": "7",
+"iso_url": "https://cdimage.debian.org/mirror/cdimage/archive/7.11.0/amd64/iso-cd/debian-7.11.0-amd64-xfce-CD-1.iso",
+"iso_checksum": "32e60589b34fb07e32993f44f91b9dffaf8849cdbe623df7f05526ceff74ab9e",
+"ssh_username": "vagrant",
+"ssh_password": "vagrant"
+}
