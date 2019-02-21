@@ -36,9 +36,13 @@ a Vagrant box.
 packer build -force -var-file=vars_wheezy_7.json  x86_64-virtualbox-vagrant.json
 ````
 
+_Add the box to local cache, replacing any existing one._
+
 ```
 vagrant box add file://builds/virtualbox/vagrant/debian-7-64/debian-7-64.box --name mheiges/debian-7-64 --force
 ```
+
+_Spin up a test instance the Vagrant box._
 
 ````
 debian=7 vagrant up
@@ -52,9 +56,13 @@ debian=7 vagrant destroy
 packer build -force -var-file=vars_jessie_8.json  x86_64-virtualbox-vagrant.json
 ````
 
+_Add the box to local cache, replacing any existing one._
+
 ```
 vagrant box add file://builds/virtualbox/vagrant/debian-8-64/debian-8-64.box --name mheiges/debian-8-64 --force
 ```
+
+_Spin up a test instance the Vagrant box._
 
 ````
 debian=8 vagrant up
@@ -68,9 +76,13 @@ debian=8 vagrant destroy
 packer build -force -var-file=vars_jessie_9.json  x86_64-virtualbox-vagrant.json
 ````
 
+_Add the box to local cache, replacing any existing one._
+
 ```
 vagrant box add file://builds/virtualbox/vagrant/debian-9-64/debian-9-64.box --name mheiges/debian-9-64 --force
 ```
+
+_Spin up a test instance the Vagrant box._
 
 ````
 debian=9 vagrant up
