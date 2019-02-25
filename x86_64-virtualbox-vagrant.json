@@ -39,7 +39,8 @@
       "extra_arguments": [
         "--ssh-extra-args",
         "-o AddKeysToAgent=no -o IdentitiesOnly=yes"
-      ]
+      ],
+      "user": "{{user `ssh_username`}}"
     }
   ],
 
